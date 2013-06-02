@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ - v2.0 | 20110126 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+html {width:100%; height:100%; overflow:hidden;}
+body {background:#774f55; width:100%; height:100%; animation:bg 15s linear forwards;}
+
+body:before {content:''; border:1400px solid #fff; height:330px; width:330px; position:absolute; top:50%; left:50%; margin:-1565px 0 0 -1565px; border-radius:2000px; z-index:999;}
+body:after {content:''; width:100%; height:50%; position:absolute; top:50%; left:0; background:#98b0c8; animation:water 15s linear forwards;}
+
+@keyframes water {100% {background:#121e2a;}}
+@keyframes bg {100% {background:#111;}}
+
+p, p:after, p:before {background:#faa571; width:210px; height:210px; position:absolute; top:50%; left:50%; border-radius:200px; margin:-105px 0 0 -105px; animation:sky 15s linear forwards;}
+p:after {content:''; display:block; margin-left:-230px; left:0;}
+p:before {content:''; display:block; margin-left:125px; right:0;}
+
+@keyframes sky {
+  25% {background:#faa571;}
+  70% {background:#db4547;}
+  80% {background:#9f3547;}
+  90% {background:#5d2647;}
+ 100% {background:#0c2533;}
+}
+
+b {background:#ffd36c; width:120px; height:120px; position:absolute; top:50%; left:50%; margin:-60px 0 0 -60px; border-radius:100px; animation:sun 15s linear forwards;}
+
+@keyframes sun {100% {background:#ff4924; margin-top:5px;}}
+
+span {background:#774f55; width:20px; height:80px; display:block; position:absolute; top:50%; left:50%; z-index:10; animation:bg 15s linear forwards;}
+span.l {margin:-10px 0 0 -125px;}
+span.r {margin:-10px 0 0 105px;}
+
+span:before {content:''; display:block; background:#774f55; width:36px; height:80px; position:absolute; top:0; left:0; z-index:10; margin:42px 0 0 -8px; animation:bg 15s linear forwards;}
+
+q:before, q:after {content:''; background:#774f55; position:absolute; top:-13px; width:16px; height:28px; animation:bg 15s linear forwards;}
+q:before {transform:skew(8deg); left:0; margin-left:-9px;}
+q:after {transform:skew(-8deg); right:0; margin-right:-9px; }
+
+ul {border:12px solid #774f55; width:340px; height:48px; position:absolute; top:50%; left:50%; z-index:10; margin:44px 0 0 -182px; animation:border 15s linear forwards;}
+
+@keyframes border {100%{border-color:#111;}}
+
+ul li {background:#774f55; width:60px; height:60px; border-radius:60px; transform:rotateY(75deg) rotateZ(2deg) translate3d(0,0,0); position:absolute; top:-6px; margin-left:-10px; transform-style:preserve-3d; backface-visibility: hidden; animation:bg 15s linear forwards;}
+
+ul li:nth-child(1) {left:0;}
+ul li:nth-child(2) {left:75px;}
+ul li:nth-child(3) {left:105px;}
+ul li:nth-child(4) {left:135px;}
+ul li:nth-child(5) {left:165px;}
+ul li:nth-child(6) {left:195px;}
+ul li:nth-child(7) {left:225px;}
+ul li:nth-child(8) {left:300px;}
+
+ul:after {content:''; background:#9d5e71; width:340px; height:50px; z-index:10; position:absolute; top:60px; left:0; animation:bg 15s linear forwards;}
